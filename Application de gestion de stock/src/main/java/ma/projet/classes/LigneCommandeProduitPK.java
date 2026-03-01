@@ -1,0 +1,41 @@
+package ma.projet.classes;
+
+import java.io.Serializable;
+import javax.persistence.*;
+import java.util.Objects;
+
+// Classe embeddable représentant la clé primaire composée
+@Embeddable
+public class LigneCommandeProduitPK implements Serializable {
+
+    private int commandeId;
+    private int produitId;
+
+    public LigneCommandeProduitPK() { }
+
+    public LigneCommandeProduitPK(int commandeId, int produitId) {
+        this.commandeId = commandeId;
+        this.produitId = produitId;
+    }
+
+    // getters et setters
+    public int getCommandeId() { return commandeId; }
+    public void setCommandeId(int commandeId) { this.commandeId = commandeId; }
+
+    public int getProduitId() { return produitId; }
+    public void setProduitId(int produitId) { this.produitId = produitId; }
+
+    // hashCode et equals obligatoires pour clé composée
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof LigneCommandeProduitPK)) return false;
+        LigneCommandeProduitPK that = (LigneCommandeProduitPK) o;
+        return commandeId == that.commandeId && produitId == that.produitId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(commandeId, produitId);
+    }
+}

@@ -22,7 +22,7 @@ public class TestLigneCommandeService {
 
         // Créer ligne commande avec clé composée
         LigneCommandeProduit l1 = new LigneCommandeProduit(7, p1, c1);
-        lcs.create(l1);
+        lcs.create(l1.getCommande());
 
         // Récupérer lignes de la commande
         List<LigneCommandeProduit> lignes = lcs.findByCommande(c1.getId());

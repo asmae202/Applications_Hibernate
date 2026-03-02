@@ -10,12 +10,10 @@ public class LigneCommandeProduit {
     private LigneCommandeProduitPK id;
 
     @ManyToOne
-    @MapsId("commandeId") // fait le lien avec la clé composée
     @JoinColumn(name = "commande_id")
     private Commande commande;
 
     @ManyToOne
-    @MapsId("produitId") // fait le lien avec la clé composée
     @JoinColumn(name = "produit_id")
     private Produit produit;
 

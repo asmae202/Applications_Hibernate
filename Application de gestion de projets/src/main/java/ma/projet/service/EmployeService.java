@@ -2,15 +2,21 @@ package ma.projet.service;
 
 import ma.projet.classes.Employe;
 import ma.projet.classes.EmployeTache;
+import ma.projet.classes.Projet;
+
 import ma.projet.util.HibernateUtil;
 import org.hibernate.Session;
 
 import java.util.List;
 
-public class EmployeService {
+public class EmployeService  extends AbstractFacade<Employe> {
+
+    public EmployeService() {
+        super(Employe.class);}
+
 
     // Afficher la liste des tâches réalisées par un employé
-    public void afficherTachesRealisees(int idEmploye) {
+    public boolean afficherTachesRealisees(int idEmploye) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         List<EmployeTache> lignes = session.createQuery(
                         "FROM EmployeTache e WHERE e.employe.id = :id", EmployeTache.class)
@@ -26,10 +32,11 @@ public class EmployeService {
                     et.getDateFinReelle());
         }
         session.close();
+        return true;
     }
 
     // Afficher la liste des projets gérés par un employé
-    public void afficherProjetsGeres(int idEmploye) {
+    public boolean afficherProjetsGeres(int idEmploye) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         List<Employe> list = session.createQuery(
                         "FROM Employe e WHERE e.id = :id", Employe.class)
@@ -44,5 +51,6 @@ public class EmployeService {
             );
         }
         session.close();
+        return true;
     }
 }

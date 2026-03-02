@@ -25,7 +25,7 @@ public class LigneCommandeProduitPK implements Serializable {
     public int getProduitId() { return produitId; }
     public void setProduitId(int produitId) { this.produitId = produitId; }
 
-    // hashCode et equals obligatoires pour clé composée
+    // hashCode et equals obligatoires pour clé composée(pas ajouter par prof)
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

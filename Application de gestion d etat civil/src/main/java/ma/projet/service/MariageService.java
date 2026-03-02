@@ -3,6 +3,7 @@ package ma.projet.service;
 import ma.projet.beans.Homme;
 import ma.projet.beans.Femme;
 import ma.projet.beans.Mariage;
+import ma.projet.beans.MariageId;
 import ma.projet.dao.IDao;
 import ma.projet.util.HibernateUtil;
 import org.hibernate.Session;
@@ -12,50 +13,13 @@ import org.hibernate.query.Query;
 import java.util.Date;
 import java.util.List;
 
-public class MariageService implements IDao<Mariage> {
+    public class MariageService extends AbstractFacade<Mariage> {
 
-    @Override
-    public void add(Mariage m) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction tx = session.beginTransaction();
-        session.save(m);
-        tx.commit();
-        session.close();
-    }
+        public MariageService() {
+            super(Mariage.class);}
 
-    @Override
-    public void update(Mariage m) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction tx = session.beginTransaction();
-        session.update(m);
-        tx.commit();
-        session.close();
-    }
 
-    @Override
-    public void delete(Mariage m) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction tx = session.beginTransaction();
-        session.delete(m);
-        tx.commit();
-        session.close();
-    }
 
-    @Override
-    public Mariage findById(int id) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Mariage m = session.get(Mariage.class, id);
-        session.close();
-        return m;
-    }
-
-    @Override
-    public List<Mariage> findAll() {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        List<Mariage> list = session.createQuery("from Mariage", Mariage.class).list();
-        session.close();
-        return list;
-    }
 
     // Afficher les mariages d’un homme
     public void afficherMariagesHomme(int hommeId) {

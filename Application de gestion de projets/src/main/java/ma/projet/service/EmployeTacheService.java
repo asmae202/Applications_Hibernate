@@ -7,14 +7,18 @@ import org.hibernate.Transaction;
 
 import java.util.List;
 
-public class EmployeTacheService {
+public class EmployeTacheService extends AbstractFacade<EmployeTache> {
 
-    public void create(EmployeTache et) {
+    public EmployeTacheService() {
+        super(EmployeTache.class);}
+    public boolean create(EmployeTache et) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
         session.save(et);
         tx.commit();
         session.close();
+        return true;
+
     }
 
     public List<EmployeTache> findAll() {

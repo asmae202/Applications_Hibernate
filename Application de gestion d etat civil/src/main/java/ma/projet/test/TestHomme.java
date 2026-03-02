@@ -13,11 +13,11 @@ public class TestHomme {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
         // Création 5 hommes
-        Homme h1 = new Homme(); h1.setNom("SAID"); h1.setPrenom("SAFI"); hs.add(h1);
-        Homme h2 = new Homme(); h2.setNom("MOHAMED"); h2.setPrenom("ALI"); hs.add(h2);
-        Homme h3 = new Homme(); h3.setNom("AHMED"); h3.setPrenom("HAMID"); hs.add(h3);
-        Homme h4 = new Homme(); h4.setNom("YASSIN"); h4.setPrenom("OMAR"); hs.add(h4);
-        Homme h5 = new Homme(); h5.setNom("RACHID"); h5.setPrenom("SAID"); hs.add(h5);
+        Homme h1 = new Homme(); h1.setNom("SAID"); h1.setPrenom("SAFI"); hs.create(h1);
+        Homme h2 = new Homme(); h2.setNom("MOHAMED"); h2.setPrenom("ALI"); hs.create(h2);
+        Homme h3 = new Homme(); h3.setNom("AHMED"); h3.setPrenom("HAMID"); hs.create(h3);
+        Homme h4 = new Homme(); h4.setNom("YASSIN"); h4.setPrenom("OMAR"); hs.create(h4);
+        Homme h5 = new Homme(); h5.setNom("RACHID"); h5.setPrenom("SAID"); hs.create(h5);
 
         // Test affichage épouses entre deux dates (exemple h1)
         Date debut = sdf.parse("01/01/1980");

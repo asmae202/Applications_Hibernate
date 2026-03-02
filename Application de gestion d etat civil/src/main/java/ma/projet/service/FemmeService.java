@@ -9,34 +9,11 @@ import org.hibernate.query.Query;
 import java.util.Date;
 import java.util.List;
 
-public class FemmeService implements ma.projet.dao.IDao<Femme> {
+public class FemmeService extends AbstractFacade<Femme> {
 
-    @Override
-    public void add(Femme f) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
-        session.save(f);
-        session.getTransaction().commit();
-        session.close();
-    }
+    public FemmeService() {
+        super(Femme.class);}
 
-    @Override
-    public void update(Femme f) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
-        session.update(f);
-        session.getTransaction().commit();
-        session.close();
-    }
-
-    @Override
-    public void delete(Femme f) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
-        session.delete(f);
-        session.getTransaction().commit();
-        session.close();
-    }
 
     @Override
     public Femme findById(int id) {
@@ -57,23 +34,20 @@ public class FemmeService implements ma.projet.dao.IDao<Femme> {
     // Nombre d'enfants d'une femme entre deux dates (requête native)
     public Long nbrEnfantsEntreDates(int femmeId, Date debut, Date fin) {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        NativeQuery<Long> query = session.createNativeQuery(
-                "SELECT SUM(nbrEnfant) FROM mariage WHERE femme_id = :fid AND dateDebut BETWEEN :debut AND :fin", Long.class);
+
+        NativeQuery query = session.createNativeQuery(
+                "SELECT SUM(nbrEnfant) FROM mariage " +
+                        "WHERE femme_id = :fid AND dateDebut BETWEEN :debut AND :fin"
+        );
+
         query.setParameter("fid", femmeId);
         query.setParameter("debut", debut);
         query.setParameter("fin", fin);
-        Long result = query.getSingleResult();
-        session.close();
-        return result != null ? result : 0;
-    }
 
-    // Femmes mariées au moins deux fois
-    public List<Femme> femmesMarieesDeuxFoisOuPlus() {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Query<Femme> query = session.createQuery(
-                "SELECT f FROM Femme f WHERE SIZE(f.mariages) >= 2", Femme.class);
-        List<Femme> result = query.list();
+        Object result = query.getSingleResult();
+
         session.close();
-        return result;
+
+        return result != null ? ((Number) result).longValue() : 0L;
     }
 }

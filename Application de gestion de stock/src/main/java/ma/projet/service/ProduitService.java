@@ -11,57 +11,17 @@ import org.hibernate.Transaction;
 import java.util.Date;
 import java.util.List;
 
-public class ProduitService implements IDao<Produit> {
 
-    // ===== CRUD =====
 
-    @Override
-    public boolean create(Produit p) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction tx = session.beginTransaction();
-        session.save(p);
-        tx.commit();
-        session.close();
-        return true;
-    }
+   public class ProduitService extends AbstractFacade<Produit> {
 
-    @Override
-    public boolean update(Produit p) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction tx = session.beginTransaction();
-        session.update(p);
-        tx.commit();
-        session.close();
-        return true;
-    }
+           public ProduitService() {
+               super(Produit.class);}
 
-    @Override
-    public boolean delete(Produit p) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction tx = session.beginTransaction();
-        session.delete(p);
-        tx.commit();
-        session.close();
-        return true;
-    }
 
-    @Override
-    public Produit findById(int id) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Produit p = session.get(Produit.class, id);
-        session.close();
-        return p;
-    }
 
-    @Override
-    public List<Produit> findAll() {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        List<Produit> list = session.createQuery("FROM Produit", Produit.class).list();
-        session.close();
-        return list;
-    }
 
-    // ===== Méthodes spécifiques =====
+
 
     // Liste des produits par catégorie
     public List<Produit> findByCategorie(int idCat) {

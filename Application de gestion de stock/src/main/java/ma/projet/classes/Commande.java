@@ -21,7 +21,7 @@ public class Commande {
 
     public Commande(Date date) { this.date = date; }
 
-    // ===== GETTERS ET SETTERS =====
+    //  GETTERS ET SETTERS
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 

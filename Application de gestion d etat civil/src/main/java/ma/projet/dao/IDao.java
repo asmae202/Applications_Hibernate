@@ -2,10 +2,21 @@ package ma.projet.dao;
 
 import java.util.List;
 
+
+/**
+ *
+ * @author X1 YOGA
+ */
 public interface IDao<T> {
-    void add(T t);
-    void update(T t);
-    void delete(T t);
+
+    boolean create(T o);
+
+    boolean delete(T o);
+
+    boolean update(T o);
+
     T findById(int id);
+
     List<T> findAll();
+
 }

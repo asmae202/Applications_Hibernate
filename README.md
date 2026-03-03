@@ -32,11 +32,7 @@ Elle illustre :
 - Afficher les produits dont le prix est supérieur à 100 DH (Named Query).  
 - Programmes de test pour chaque fonctionnalité.
 
-### Différence avec les autres exercices
 
-- **Focus sur les stocks et produits**.  
-- Gestion simple des relations **Produit ↔ Commande**.  
-- Requêtes centrées sur le **prix, la catégorie et la date de commande**.
 
 ### Exemple d’affichage attendu
 

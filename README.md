@@ -45,6 +45,43 @@ https://github.com/user-attachments/assets/5b751b24-6ad3-4172-ae65-ad738b3e2034
 
 
 
+---
+
+## Lab 2 — Gestion de projets
+
+### Description
+
+Cette application permet de suivre le temps passé sur les projets et calculer les coûts globaux.  
+Elle illustre :
+
+- La persistance des **Projets, Tâches, Employés, EmployéTache**.  
+- La création de services avec méthodes génériques et spécifiques.  
+- L’utilisation de **requêtes HQL et Named Queries** pour filtrer les tâches par prix ou période.  
+- L’affichage formaté des tâches d’un projet ou d’un employé.
+
+### Fonctionnalités principales
+
+- Afficher les tâches réalisées par un employé.  
+- Afficher les projets gérés par un employé.  
+- Afficher les tâches planifiées pour un projet.  
+- Afficher les tâches réalisées avec les dates réelles.  
+- Afficher les tâches dont le prix > 1000 DH.  
+- Afficher les tâches réalisées entre deux dates.
+
+### Différence avec les autres exercices
+
+- **Focus sur la gestion de projets et tâches**.  
+- Relations plus complexes : **Projet ↔ Tâche ↔ Employé**.  
+- Les requêtes filtrent **par prix et dates des tâches**, pas par produit ou stock.
+
+### Exemple d’affichage attendu
+
+
+https://github.com/user-attachments/assets/d4a4176d-1860-4d96-a7b3-78db67b17c68
+
+
+
+https://github.com/user-attachments/assets/d4a4176d-1860-4d96-a7b3-78db67b17c68
 
 
 
@@ -61,7 +98,6 @@ https://github.com/user-attachments/assets/5b751b24-6ad3-4172-ae65-ad738b3e2034
 
 
 
-https://github.com/user-attachments/assets/5b751b24-6ad3-4172-ae65-ad738b3e2034
 
 
 

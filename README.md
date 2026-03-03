@@ -1,4 +1,62 @@
 
+# Applications Hibernate – Exercices Pratiques
+
+Ce dépôt contient trois applications développées avec **Java, Hibernate/JPA** et **MySQL**, chacune illustrant un scénario différent de gestion de données persistantes et multi-couches.
+
+---
+
+## Sommaire
+
+1. [Lab 1 — Gestion de stock](#exercice-1-gestion-de-stock)  
+2. [Lab 2 — Gestion de projets](#exercice-2-gestion-de-projets)  
+3. [Lab 3 — Gestion de l’état civil](#exercice-3-gestion-de-létat-civil)  
+
+---
+
+## Lab 1 — Gestion de stock
+
+### Description
+
+Cette application permet de gérer le stock d’un magasin de produits informatiques.  
+Elle illustre :
+
+- La persistance des **produits, catégories, commandes et lignes de commande**.  
+- L’utilisation de **requêtes HQL et Named Queries** pour filtrer les produits selon la catégorie, le prix ou la commande.  
+- L’affichage formaté des produits commandés.
+
+### Fonctionnalités principales
+
+- Afficher les produits par catégorie.  
+- Afficher les produits commandés entre deux dates.  
+- Afficher les produits d’une commande spécifique.  
+- Afficher les produits dont le prix est supérieur à 100 DH (Named Query).  
+- Programmes de test pour chaque fonctionnalité.
+
+### Différence avec les autres exercices
+
+- **Focus sur les stocks et produits**.  
+- Gestion simple des relations **Produit ↔ Commande**.  
+- Requêtes centrées sur le **prix, la catégorie et la date de commande**.
+
+### Exemple d’affichage attendu
+
+
+
+
+
+
+
+
+
+
+
+## Sommaire
+
+1. [Exercice 1 — Gestion de stock](#exercice-1-gestion-de-stock)  
+2. [Exercice 2 — Gestion de projets](#exercice-2-gestion-de-projets)  
+3. [Exercice 3 — Gestion de l’état civil](#exercice-3-gestion-de-létat-civil)  
+
+---
 RUN EX1:
 
 TEST LIGNECOMMANDE:

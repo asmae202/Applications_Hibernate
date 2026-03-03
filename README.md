@@ -81,7 +81,42 @@ https://github.com/user-attachments/assets/d4a4176d-1860-4d96-a7b3-78db67b17c68
 
 
 
-https://github.com/user-attachments/assets/d4a4176d-1860-4d96-a7b3-78db67b17c68
+
+
+---
+
+## Exercice 3 — Gestion de l’état civil
+
+### Description
+
+Cette application gère les citoyens et leurs relations matrimoniales.  
+Elle illustre :
+
+- La persistance des **Homme, Femme, Mariage**.  
+- L’utilisation de **requêtes natives, Named Queries et Criteria API**.  
+- La gestion de **relations complexes et statistiques** (nombre d’enfants, mariages multiples).  
+- L’affichage détaillé des mariages d’un homme et des femmes mariées plusieurs fois.
+
+### Fonctionnalités principales
+
+- Afficher les épouses d’un homme entre deux dates.  
+- Nombre d’enfants d’une femme entre deux dates (Native Query).  
+- Afficher les femmes mariées deux fois ou plus (Named Query).  
+- Afficher le nombre d’hommes mariés à quatre femmes entre deux dates (Criteria API).  
+- Afficher les mariages d’un homme avec tous les détails (dates, enfants, statut).
+
+### Différence avec les autres exercices
+
+- **Focus sur les relations humaines et l’état civil**.  
+- Relations **complexes et multiples** entre entités.  
+- Requêtes avancées utilisant **Criteria API et requêtes natives**.  
+- Moins orienté « produit ou projet », plus orienté **statistiques et reporting familial**.
+
+### Exemple d’affichage attendu
+
+
+
+https://github.com/user-attachments/assets/81f945b0-347b-418d-8014-3ae932df8e8b
 
 
 
@@ -107,11 +142,9 @@ https://github.com/user-attachments/assets/d4a4176d-1860-4d96-a7b3-78db67b17c68
 
 
 
-## Sommaire
 
-1. [Exercice 1 — Gestion de stock](#exercice-1-gestion-de-stock)  
-2. [Exercice 2 — Gestion de projets](#exercice-2-gestion-de-projets)  
-3. [Exercice 3 — Gestion de l’état civil](#exercice-3-gestion-de-létat-civil)  
+
+
 
 ---
 RUN EX1:

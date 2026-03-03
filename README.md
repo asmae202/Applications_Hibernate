@@ -64,11 +64,7 @@ Elle illustre :
 - Afficher les tâches dont le prix > 1000 DH.  
 - Afficher les tâches réalisées entre deux dates.
 
-### Différence avec les autres exercices
 
-- **Focus sur la gestion de projets et tâches**.  
-- Relations plus complexes : **Projet ↔ Tâche ↔ Employé**.  
-- Les requêtes filtrent **par prix et dates des tâches**, pas par produit ou stock.
 
 ### Exemple d’affichage attendu
 
@@ -101,12 +97,6 @@ Elle illustre :
 - Afficher le nombre d’hommes mariés à quatre femmes entre deux dates (Criteria API).  
 - Afficher les mariages d’un homme avec tous les détails (dates, enfants, statut).
 
-### Différence avec les autres exercices
-
-- **Focus sur les relations humaines et l’état civil**.  
-- Relations **complexes et multiples** entre entités.  
-- Requêtes avancées utilisant **Criteria API et requêtes natives**.  
-- Moins orienté « produit ou projet », plus orienté **statistiques et reporting familial**.
 
 ### Exemple d’affichage attendu
 

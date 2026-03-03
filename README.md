@@ -41,6 +41,27 @@ Elle illustre :
 ### Exemple d’affichage attendu
 
 
+https://github.com/user-attachments/assets/5b751b24-6ad3-4172-ae65-ad738b3e2034
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://github.com/user-attachments/assets/5b751b24-6ad3-4172-ae65-ad738b3e2034
 
 
 
